@@ -1,0 +1,16 @@
+
+services:
+  mongodb:
+    image: mongo:8
+    container_name: eshop-mongodb
+    restart: unless-stopped
+    ports:
+      - "${MONGO_PORT:-27017}:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_USER:?Configure MONGO_USER no .env}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_PASSWORD:?Configure MONGO_PASSWORD no .env}
+    volumes:
+      - mongodb_data:/data/db
+
+volumes:
+  mongodb_data:

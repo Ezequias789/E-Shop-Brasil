@@ -1,0 +1,17 @@
+
+# Credenciais e configuracoes locais
+.env
+
+# Ambiente virtual Python
+.venv/
+
+# Arquivos temporarios Python
+__pycache__/
+*.pyc
+
+# Configuracoes locais do editor
+.vscode/
+
+# Arquivos do sistema
+.DS_Store
+Thumbs.db
